@@ -1,0 +1,13 @@
+<p>Look up ToDo by Id</p>
+<input type="number" [(ngModel)]="id" />
+<button (click)="searchToDosById()">Look up</button>
+
+<div *ngIf="todo.task !== ''">
+    <p>Task:</p>
+    <input type="text" [(ngModel)]="todo.task" />
+
+    <p>Completed:</p>
+    <input type="boolean" [(ngModel)]="todo.completed" />
+
+    <button (click)="updateToDo()">Update</button>
+</div>
